@@ -7,12 +7,13 @@ number_row_length = int(input('Введите длину ряда: '))
 
 fibonacci_positive = []
 [
-        fibonacci_positive.insert(i, i) if (i == 0 or i == 1) 
-        else fibonacci_positive.append(fibonacci_positive[i-1]+fibonacci_positive[i-2]) 
-        for i in range(0, number_row_length+1)
+    fibonacci_positive.insert(i, i) if (i == 0 or i == 1)
+    else fibonacci_positive.append(fibonacci_positive[i - 1] + fibonacci_positive[i - 2])
+    for i in range(0, number_row_length + 1)
 ]
 
-fibonacci_negative = [((-1)**(i+1))*item for i, item in enumerate(fibonacci_positive) if i !=0]
+fibonacci_negative = [((-1)**(i + 1))*item for i,
+                      item in enumerate(fibonacci_positive) if i != 0]
 
 fibonacci_negative.reverse()
 fibonacci = fibonacci_negative + fibonacci_positive
